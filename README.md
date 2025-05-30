@@ -45,6 +45,49 @@ Acompanhar a frequência dos alunos de forma precisa permite identificar padrõe
 - 📤 **Notificações** *(em estudo, não sabemos se sera possivel)*: por SMS, e-mail ou WhatsApp para responsáveis e professores.
 
 ---
+📁 possivel estrutura do diretorio 
+
+sosatraso/
+├── app/
+│   ├── Controllers/
+│   │   ├── AuthController.php
+│   │   ├── HomeController.php
+│   │   ├── StudentController.php
+│   │   └── UploadController.php
+│   ├── Models/
+│   │   ├── Class.php
+│   │   ├── Database.php  # (Opcional: encapsular PDO)
+│   │   ├── DelayRecord.php
+│   │   └── Student.php
+│   └── Views/
+│       ├── layouts/
+│       │   └── main.php
+│       ├── partials/
+│       │   └── suggestions.php
+│       ├── home/
+│       │   └── index.php
+│       ├── auth/
+│       │   └── ticket.php
+│       └── upload/
+│           └── status.php
+├── config/
+│   ├── base.php
+│   └── conexao.php
+├── public/
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   └── index.php       # Front Controller
+├── storage/            # Para arquivos como o XLS
+│   └── uploads/
+├── vendor/             # Dependências do Composer
+├── .gitignore
+├── composer.json
+├── composer.lock
+├── database.sql
+└── PLAN.md             # Este arquivo
+
+---
 
 ## 🔐 Gerar Senha de Administrador
 
@@ -56,3 +99,10 @@ $senha = 'admin'; // Substitua pela senha desejada
 $hash = password_hash($senha, PASSWORD_DEFAULT);
 echo $hash;
 ?>
+###
+````
+## 🔐 Adicionar usuario ADM no banco de dados
+
+```
+UPDATE usuarios SET senha = 'novo_hash_gerado' WHERE setor = 'admin';
+
