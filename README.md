@@ -50,42 +50,63 @@ Acompanhar a frequência dos alunos de forma precisa permite identificar padrõe
 sosatraso/
 ├── app/
 │   ├── Controllers/
-│   │   ├── AuthController.php
-│   │   ├── HomeController.php
-│   │   ├── StudentController.php
-│   │   └── UploadController.php
+│   │   ├── AdminController.php          # Controla ações gerais do admin
+│   │   ├── AlunoController.php          # Lógica para alunos e atrasos
+│   │   ├── AuthController.php           # Login, logout, autorização
+│   │   ├── RelatorioController.php      # Geração de relatórios
+│   │   ├── UploadController.php         # Upload de arquivos
+│   │   ├── UsuarioController.php        # Gerencia usuários
+│   │   └── ArquivoController.php        # Lida com arquivos e pastas
+│   │
 │   ├── Models/
-│   │   ├── Class.php
-│   │   ├── Database.php      # (Opcional: encapsular PDO)
-│   │   ├── DelayRecord.php
-│   │   └── Student.php
-│   └── Views/
-│       ├── layouts/
-│       │   └── main.php
-│       ├── partials/
-│       │   └── suggestions.php
-│       ├── home/
-│       │   └── index.php
-│       ├── auth/
-│       │   └── ticket.php
-│       └── upload/
-│           └── status.php
+│   │   ├── Admin.php                    # Model de administração
+│   │   ├── Aluno.php                    # Model do aluno
+│   │   ├── Usuario.php                  # Model do usuário
+│   │   ├── DelayRecord.php              # Model para registros de atraso
+│   │   ├── Relatorio.php                # Model para relatórios
+│   │   └── Arquivo.php                  # Model para arquivos
+│   │
+│   ├── Views/
+│   │   ├── admin/                       # Views relacionadas à área admin
+│   │   │   ├── alunos/
+│   │   │   ├── usuarios/
+│   │   │   ├── auth/
+│   │   │   ├── relatorios/
+│   │   │   └── index.php                # Dashboard admin
+│   │   │
+│   │   ├── arquivo/                     # Views para arquivos
+│   │   ├── auth/                       # Views para login/logout etc
+│   │   ├── alunos/                     # Views para alunos e atrasos
+│   │   └── layouts/                    # Layouts (header, footer, menus)
+│   │
 ├── config/
-│   ├── base.php
-│   └── conexao.php
-├── public/
-│   ├── css/
-│   ├── images/
-│   ├── js/
-│   └── index.php             # Front Controller
-├── storage/                  # Para arquivos como o XLS
+│   ├── base.php                       # Config base do sistema
+│   ├── conexao.php                    # Conexão com o banco de dados
+│   └── autorizacao.php                # Arquivo para permissões/autenticação
+│
+├── public/                           # Pasta pública para assets e front controller
+│   ├── css/                          # Arquivos CSS
+│   ├── imagens/                      # Imagens usadas pelo sistema
+│   ├── js/                          # Arquivos JavaScript
+│   └── index.php                    # Front controller (entrada da aplicação)
+│
+├── storage/                         # Arquivos armazenados como uploads, logs etc
 │   └── uploads/
-├── vendor/                   # Dependências do Composer
+│
+├── tests/                          # Testes automatizados, unitários etc
+│
+├── vetor/                          # Vetores e imagens gráficas
+│
 ├── .gitignore
 ├── composer.json
 ├── composer.lock
-├── database.sql
-└── PLAN.md                   # Este arquivo
+├── databases.sql                   # Dump do banco de dados
+├── README.md                      # Documentação do projeto
+├── copozer.json                   # Configuração extra (ex: editor, build)
+├── settings.json                  # Configurações do projeto
+└── upload.php                     # Script para upload (deve ir para controller)
+
+
 
 ````
 
