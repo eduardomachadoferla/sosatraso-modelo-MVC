@@ -45,8 +45,9 @@ Acompanhar a frequência dos alunos de forma precisa permite identificar padrõe
 - 📤 **Notificações** *(em estudo, não sabemos se sera possivel)*: por SMS, e-mail ou WhatsApp para responsáveis e professores.
 
 ---
-📁 possivel estrutura do diretorio 
+## 📁 Possível Estrutura do Diretório
 
+```Estrutura
 sosatraso/
 ├── app/
 │   ├── Controllers/
@@ -56,7 +57,7 @@ sosatraso/
 │   │   └── UploadController.php
 │   ├── Models/
 │   │   ├── Class.php
-│   │   ├── Database.php  # (Opcional: encapsular PDO)
+│   │   ├── Database.php      # (Opcional: encapsular PDO)
 │   │   ├── DelayRecord.php
 │   │   └── Student.php
 │   └── Views/
@@ -77,17 +78,17 @@ sosatraso/
 │   ├── css/
 │   ├── images/
 │   ├── js/
-│   └── index.php       # Front Controller
-├── storage/            # Para arquivos como o XLS
+│   └── index.php             # Front Controller
+├── storage/                  # Para arquivos como o XLS
 │   └── uploads/
-├── vendor/             # Dependências do Composer
+├── vendor/                   # Dependências do Composer
 ├── .gitignore
 ├── composer.json
 ├── composer.lock
 ├── database.sql
-└── PLAN.md             # Este arquivo
+└── PLAN.md                   # Este arquivo
 
----
+````
 
 ## 🔐 Gerar Senha de Administrador
 
