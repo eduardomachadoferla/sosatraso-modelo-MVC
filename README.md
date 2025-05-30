@@ -1,4 +1,4 @@
-﻿# 📘 Projeto SOS ATRASO
+# 📘 Projeto SOS ATRASO
 
 ## 📌 Visão Geral
 
@@ -42,10 +42,17 @@ Acompanhar a frequência dos alunos de forma precisa permite identificar padrõe
 - 📑 **Relatórios**: exportação em PDF/CSV e agendamento automático.  
 - 🔐 **Login e Controle de Acesso**: com níveis diferentes e autenticação em dois fatores.  
 - 📊 **Histórico e Gráficos**: visualização dos dados por aluno.  
-- 📤 **Notificações** *(em estudo não sabemos se sera possivel)*: por SMS, e-mail ou WhatsApp para responsáveis e professores.
+- 📤 **Notificações** *(em estudo, não sabemos se sera possivel)*: por SMS, e-mail ou WhatsApp para responsáveis e professores.
 
 ---
 
-## ✅ Status do Projeto
+## 🔐 Gerar Senha de Administrador
 
-🚧 **Em desenvolvimento** — funcionalidades principais já implementadas, testes em andamento, integração e notificações em fase de estudo.
+Para criar a senha do primeiro administrador, execute o seguinte script PHP dentro da pasta admin no arquivo gerar-senha-adm.php no seu servidor local ou ferramenta online:
+
+```php
+<?php
+$senha = 'admin'; // Substitua pela senha desejada
+$hash = password_hash($senha, PASSWORD_DEFAULT);
+echo $hash;
+?>
