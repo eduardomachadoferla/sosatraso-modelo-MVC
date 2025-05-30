@@ -2,8 +2,7 @@
 
 ## 📌 Visão Geral
 
-O **SOS ATRASO** é um sistema desenvolvido para **automatizar o registro de atrasos de alunos**, oferecendo à escola um controle interno mais eficiente e organizado. O projeto foi iniciado em 2024 pelos alunos **Celine, André e Pablo** e, em 2025, passou a ser continuado pelos gerentes de projeto **Leandro, Louize e Samuel**.
-
+O **SOS ATRASO** é um sistema desenvolvido para **automatizar o registro de atrasos de alunos**, oferecendo à escola um controle interno mais eficiente e organizado.
 Por meio de um sistema simples e intuitivo, os alunos registram seus atrasos ao chegarem na escola. O sistema captura informações como nome, turma, motivo do atraso e horário de entrada, e gera um **ticket impresso** que serve como comprovante.
 
 ---
